@@ -1,14 +1,12 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text"
-    },
-    {
         "title": "New note",
-        "text": "Here's a new note!"
+        "text": "Here's a new note!",
+        "id": "4k171xoaxevgkz6ekbw0"
     },
     {
-        "title": "And another one!",
-        "text": "YAAAAAAAAAAAAAAAAAAAAAAAAAAAAY"
+        "title": "An another one!",
+        "text": "YAAAAAAAAAAAAAAY!!!!!!!",
+        "id": "s0lih8zurhq3mxb2twam"
     }
 ]
