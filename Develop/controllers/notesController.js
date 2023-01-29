@@ -31,12 +31,38 @@ router.post("/", (req, res) => {
             notesData.push(newNote)
             fs.writeFile("./db/db.json", JSON.stringify(notesData, null, 4), (err) => {
                 if (err) {
-                  res.status(500).send("oh no!");
-                  throw err;
+                    res.status(500).send("oh no!");
+                    throw err;
                 } else {
-                  res.send("data added!");
+                    res.send("data added!");
                 }
-              });
+            });
+        }
+    });
+});
+
+router.delete("/:id", (req, res) => {
+    fs.readFile("./db/db.json", "utf-8", (err, data) => {
+        if (err) {
+            res.status(500).send("oh no!");
+            throw err;
+        } else {
+            let notesData = JSON.parse(data);
+            notesData = notesData.filter((friend) => {
+                if (friend.id == req.params.id) {
+                    return false;
+                } else {
+                    return true;
+                }
+            });
+            fs.writeFile("./db/db.json", JSON.stringify(notesData, null, 4), (err) => {
+                if (err) {
+                    res.status(500).send("oh no!");
+                    throw err;
+                } else {
+                    res.send("data deleted!");
+                }
+            });
         }
     });
 });
