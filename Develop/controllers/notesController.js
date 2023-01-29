@@ -6,7 +6,7 @@ const generateUniqueId = require('generate-unique-id');
 router.get("/", (req, res) => {
     fs.readFile("./db/db.json", "utf-8", (err, data) => {
         if (err) {
-            res.status(500).send("oh no!");
+            res.status(500).send("Ooooops! Something went wrong...");
             throw err;
         } else {
             const notesData = JSON.parse(data);
@@ -18,7 +18,7 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
     fs.readFile("./db/db.json", "utf-8", (err, data) => {
         if (err) {
-            res.status(500).send("oh no!");
+            res.status(500).send("Ooooops! Something went wrong...");
             throw err;
         } else {
             const notesData = JSON.parse(data);
@@ -31,7 +31,7 @@ router.post("/", (req, res) => {
             notesData.push(newNote)
             fs.writeFile("./db/db.json", JSON.stringify(notesData, null, 4), (err) => {
                 if (err) {
-                    res.status(500).send("oh no!");
+                    res.status(500).send("Ooooops! Something went wrong...");
                     throw err;
                 } else {
                     res.send("data added!");
@@ -44,7 +44,7 @@ router.post("/", (req, res) => {
 router.delete("/:id", (req, res) => {
     fs.readFile("./db/db.json", "utf-8", (err, data) => {
         if (err) {
-            res.status(500).send("oh no!");
+            res.status(500).send("Ooooops! Something went wrong...");
             throw err;
         } else {
             let notesData = JSON.parse(data);
@@ -57,7 +57,7 @@ router.delete("/:id", (req, res) => {
             });
             fs.writeFile("./db/db.json", JSON.stringify(notesData, null, 4), (err) => {
                 if (err) {
-                    res.status(500).send("oh no!");
+                    res.status(500).send("Ooooops! Something went wrong...");
                     throw err;
                 } else {
                     res.send("data deleted!");

@@ -3,6 +3,15 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #E4DFDA;
+}
+
+.myBackgroundColor {
+  background-color: #E4DFDA;
+}
+
+.myColors {
+  background-color: #D4B483;
 }
 
 .save-note {
@@ -31,7 +40,7 @@ body {
 }
 
 .note-title {
-  height: 50px;
+  height: 75px;
   margin-top: 13px;
   font-size: 3rem;
 }
@@ -75,4 +84,5 @@ body {
   border-right: none;
   padding: 20px;
   cursor: pointer;
+  background-color: #E4DFDA;
 }
