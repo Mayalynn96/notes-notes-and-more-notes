@@ -32,6 +32,8 @@ If none of those files are available or there aren't any dependencies listed in 
 
 -generate-unique-id@2.0.1
 
+Then start the server by running npm start in the terminal and go to http://localhost:3000 in your browser.
+
 ## Usage
 
 To use my website go to the following URL: https://notes-notes-and-more-notes.herokuapp.com/ 
